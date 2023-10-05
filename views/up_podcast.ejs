@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/upload.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--    <link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <script src="https://kit.fontawesome.com/1657b8a72e.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+    <title>Upload Podcast</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%-include('header/navbar.ejs', {login: login, money: money})%>
+    <!-- End Of Navbar -->
+
+
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+
+
+    <a href="#" class="to_top">
+        <i class="fa fa-chevron-up"></i>
+        <script src="/js/to_top.js"> </script>
+    </a>
+
+    <div class="container" id="blur">
+        <!-- Upload Section -->
+        <div class="wrapper">
+            <h2>Upload Podcast</h2>
+            <form action="/api/podcast/upload" enctype="multipart/form-data" method="POST">
+                <div class="content_upload">
+                    <label for="mp3">Select a podcast (mp3 file):</label>
+                    <input type="file" id="music" name="audio" onchange="file_mp3_validation()">
+                </div>
+                <div class="content_upload">
+                    <label for="myfile">Select a thumbnail for your podcast:</label>
+                    <input type="file" name="image" id="thumbnail"  onchange="file_thumbnail_validation()">
+                </div>
+                <div class="content_upload">
+                    <label for="name">Podcast's Name:</label>
+                    <input type="text" name="name" placeholder="Enter podcast name..." id="name">
+                </div>
+                <div class="submit_btn">
+                    <button type="submit" id="submit" onclick="check()" >Submit</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- End of Upload Section -->
+    </div>
+    <!-- Pop Up Validation -->
+
+    <div class="popup_validation" id="popup">
+        <div class="title" style="color: red;">
+            <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="invalid_text">Invalid File Type. Please Choose Again !</div>
+    </div>
+
+    <div class="popup_validation" id="successful_popup">
+        <div class="title" style="color: green;">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="invalid_text">You successfully submitted your podcast !</div>
+    </div>
+
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+
+    <%-include('header/footer.ejs')%>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+      <script src="/js/upload.js"></script>
+</body>
+</html>

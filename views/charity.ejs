@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/charity.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>Charity</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <%-include('header/navbar.ejs', {login: login, money: money})%>
+
+        <!-- End Of Navbar -->
+
+        <div class="charity-section">
+            <div class="detail-content">
+                    <div class="screen_name">
+                        <h2><strong>Charity</strong></h2>
+                    </div>
+                    <div class="text_description">
+                        <h2><strong>At Cornfield.com we take a 5% transaction fees to donate to charities of your choice! </strong></h2>
+                    </div>
+                <div class="charity_organizations">
+                    <script src="/js/charity_organizations.js"></script>
+                    <img src="/assets/charity-img/who.jpg" alt="" class="group" onclick="who()"  />
+                    <img src="/assets/charity-img/cross.jpg" alt="" class="group" onclick="cross()" />
+                    <img src="/assets/charity-img/children.jpg" alt="" class="group" onclick="children()" />
+                    <img src="/assets/charity-img/plan.jpg" alt="" class="group" onclick="plan()" />
+                    <img src="/assets/charity-img/unicef.jpg" alt="" class="group" onclick="unicef()" />
+                    <img src="/assets/charity-img/maiam.jpg" alt="" class="group" onclick="maiam()" />
+                </div>
+            </div>
+            <div class="text-bottom">
+                <strong>Choose one to get started now!</strong>
+            </div>
+        </div>
+        <!-- Back To Top Button -->
+        <a href="#" class="to_top">
+            <i class="fa fa-chevron-up"></i>
+            <script src="/js/to_top.js"></script>
+        </a>
+        <!-- End Of "Back To Top Button"-->
+
+        <!-- Footer -->
+        <%-include('header/footer.ejs')%>
+        <!-- End of Footer -->
+    </body>
+</html>

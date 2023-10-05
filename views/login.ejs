@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+
+        <link rel="icon" href="/assets/logo.png" />
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <script src="/jquery/jquery.min.js"></script>
+    </head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">
+               <strong>     Login </strong>
+                </button>
+                <button type="button" class="toggle-btn" onclick="register()">
+                 <strong>   Register</strong>
+                </button>
+            </div>
+            <form id="login" class="input-group">
+                <label><input type="text" class="input-field" placeholder="Username" onkeyup="daoNutDN_1()" id="user" required autofocus></label>
+                <label><input type="password" class="input-field" placeholder="Password" onkeyup="daoNutDN_1()" id="pass" required autofocus></label>
+                <button type="submit" class="submit-btn" id="submit">Log In</button>
+            </form>
+            <form id="register" class="input-group">
+                <label><input type="text" class="input-field" placeholder="Username" onkeyup="daoNutDN_2()" id="user1" required autofocus></label>
+                <label><input type="password" class="input-field" placeholder="Enter Password" onkeyup="daoNutDN_2()" id="pass1" required autofocus></label>
+                <button type="button" class="submit-btn" id="connect">Connect Plug</button>
+                <br/>
+                <button type="submit" class="submit-btn" id="submit-reg">Register</button>
+            </form>
+            <div class="back-to-last">
+                <ion-icon id="backicon" name="arrow-back-circle-outline" onclick="history.back()"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/lo_re.js"></script>
+    <script src="/js/fetch/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

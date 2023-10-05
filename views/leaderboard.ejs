@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/leaderboard.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://kit.fontawesome.com/1657b8a72e.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Baloo Bhai" rel="stylesheet" />
+        <title>LeaderBoard</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <%-include('header/navbar.ejs', {login: login, money: money})%>
+
+        <!-- End Of Navbar -->
+
+        <!-- Content Of Leaderboard Section -->
+        <div class="Leaderboard">
+            <div class="head">
+                    <div class="screen_name">
+                        <h2><strong>Leaderboard</strong></h2>
+                    </div>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa fa-trophy" style="color: rgb(95, 224, 207);"></i> Position</th>
+                            <th><i class="fa fa-user" style="color: #5a87da;"></i> User</th>
+                            <th><i class="fa fa-music" style="color: #40aa87;"></i> Podcast</th>
+                            <th><i class="fa fa-seedling" style="color: yellow;"></i> Corn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>User1</td>
+                            <td>50</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>User2</td>
+                            <td>48</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>User3</td>
+                            <td>20</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>User4</td>
+                            <td>50</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>User5</td>
+                            <td>12</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- End Of Leaderboard Section -->
+
+        <!-- Back To Top Button -->
+        <a href="#" class="to_top">
+            <i class="fa fa-chevron-up"></i>
+            <script src="/js/to_top.js"></script>
+        </a>
+        <!-- End Of "Back To Top Button"-->
+
+        <!-- Footer -->
+        <%-include('header/footer.ejs')%>
+    </body>
+</html>

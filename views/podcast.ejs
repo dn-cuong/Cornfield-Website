@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/podcast.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicon-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Podcast</title>
+</head>
+<body>
+<!-- Navbar -->
+<%-include('header/navbar.ejs', {login: login, money: money})%>
+
+<!-- End Of Navbar -->
+
+<!-- Search Section -->
+<div class="filtered_search">
+    <div class="search_bar">
+        <label> <input type="text" placeholder="Search.." /> <i class="fa fa-search"></i> </label>
+    </div>
+    <div class="options"></div>
+</div>
+<!-- End Of Search Section-->
+
+<!-- Podcast Section -->
+<div class="podcast_section">
+    <div class="main-pod">
+        <h2 class="category">AMAZING PODCASTS ARE WAITING FOR YOU</h2>
+        <div class="podcast">
+            <% podcasts.forEach(function(podcast){ %>
+                <%- include('box/podcast-item', {id: podcast._id, name: podcast.name, username: podcast.ownerId.username}); %>
+            <% }); %>
+        </div>
+    </div>
+    <!-- End Of Podcast Section -->
+
+    <!-- Side Content Section -->
+    <div class="side-col">
+        <div class="trending-side">
+            <div>
+                <h2 class="trend-name">Trending searches</h2>
+                <div class="">
+                    <ul class="trending-list">
+                        <li class="trending-name">
+                            <span>Elon Musk's Mindset</span>
+                            <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                        </li>
+                        <li class="trending-name">
+                            <span>YOLO lifestyle</span>
+                            <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                        </li>
+                        <li class="trending-name">
+                            <span>Investment Sites</span>
+                            <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                        </li>
+                        <li class="trending-name">
+                            <span>Stocks and Bonds</span>
+                            <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                        </li>
+                        <li class="trending-name">
+                            <span>Bitcoin Rising</span>
+                            <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-box" onclick="toCreate()">
+            <h2 class="upload-text">MAKE YOUR</h2>
+            <div class="inner-box">
+                <i class="fa fa-microphone" aria-hidden="true" style="font-size: 60px;"></i>
+            </div>
+            <h2 class="upload-text">OWN PODCAST</h2>
+        </div>
+        <!-- End Of Upload Section -->
+    </div>
+</div>
+<!-- End of Side Content Section -->
+
+
+<!-- Back To Top Button -->
+<a href="#" class="to_top">
+    <i class="fa fa-chevron-up"></i>
+    <script src="/js/to_top.js"> </script>
+</a>
+<!-- End Of "Back To Top Button"-->
+
+
+<!-- Footer -->
+<%-include('header/footer.ejs')%>
+<!-- End of Footer -->
+
+
+<script src="/js/podcast.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

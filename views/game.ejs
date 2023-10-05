@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/game.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Game</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%-include('header/navbar.ejs', {login: login, money: money})%>
+
+    <!-- End Of Navbar -->
+
+    <!-- Show Image Section-->
+
+    <!-- Main Content -->
+    <div class="container">
+        <img src="/assets/game.png" alt="" class="show-img">
+        <img src="/assets/game2.png" alt="" class="show-img">
+        <img src="/assets/game3.png" alt="" class="show-img">
+        <img src="/assets/game4.png" alt="" class="show-img">
+    <!-- End Of Show Image Section -->
+
+
+    <!-- Back To Top Button -->
+        <a href="#" class="to_top">
+            <i class="fa fa-chevron-up"></i>
+            <script src="/js/to_top.js"> </script>
+        </a>
+        <!-- End Of "Back To Top Button"-->
+
+
+        <!-- Footer -->
+        </div>
+
+    <!-- Footer -->
+    <%-include('header/footer.ejs')%>
+<!-- End of Footer -->
+
+</body>
+</html>

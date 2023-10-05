@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/blog.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>News</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <%-include('header/navbar.ejs', {login: login, money: money})%>
+        <!-- End Of Navbar -->
+
+        <!-- News Content -->
+        <div class="container">
+            <div class="hero" style="background-image: url(/api/news/getimage/<%=news._id%>);"></div>
+            <main style="margin-top: 100px;">
+                <h2><%=news.title%></h2>
+<!--                <div class="profile-container">-->
+<!--                    <div class="profile">-->
+<!--                        <div class="img-container"></div>-->
+<!--                        <div class="text">-->
+<!--                            <h3>Admin</h3>-->
+<!--                            <p>August 12, 2022</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="content">
+                    <%=news.content%>
+                </div>
+            </main>
+            <!-- End Of News Content-->
+
+            <!-- Back To Top Button -->
+            <a href="#" class="to_top">
+                <i class="fa fa-chevron-up"></i>
+                <script src="/public/js/to_top.js"></script>
+            </a>
+            <!-- End Of "Back To Top Button"-->
+
+            <!-- Footer -->
+            <%-include('header/footer.ejs')%>
+        </div>
+    </body>
+</html>

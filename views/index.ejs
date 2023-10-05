@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/home.css">
+        <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="/jquery/jquery.min.js"></script>
+        <title>Home</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <%=login%>
+        <%-include('header/navbar.ejs', {login: login, money: money})%>
+
+        <!-- End Of Navbar -->
+
+        <!-- Content -->
+        <main>
+            <div class="content">
+                <div class="main_content">
+                    <h2 class="text">A digital <br> Nation</h2>
+                    <img src="/assets/cornn.png" alt="corn" class="corn" >
+                    <h3 class="quote">Start your corn farm today </h3>
+                    <button class="start"  data-modal-target="#pop_up"> <strong> Getting Started </strong></button>
+                    <div class="pop_up_content" id="pop_up">
+                        <div class="pop_up_header">
+                            <div class="title">
+                                <h2> <i class="fa fa-pencil" aria-hidden="true"></i> Instruction</h2>
+                            </div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="pop_up_body">
+                            <strong> Cornfield </strong>là công cụ thông minh giúp kích thích niềm say mê học tập và tích lũy tri thức, là người bạn tốt của người học mọi lứa tuổi. Để thực hiện sứ mệnh cao cả đó, website ứng dụng một cách công bằng và linh hoạt cơ chế phần thưởng cùng với tiềm năng phát triển gameplay trong tương lai. <br> <br>
+                            Đồng hành cùng website chính là tính năng <strong>Podcast</strong>, nơi người dùng sẽ được lựa chọn một kho tàng Podcast theo nhu cầu của mình, và nội dung các Podcast sẽ vô cùng đa dạng nhằm hài lòng nhiều nhóm người nghe. Hệ thống Podcast được phân loại đa dạng nên website sở hữu cơ chế sorting để người dùng có thể chọn lựa dễ dàng hơn. Cùng với đó, người dùng sẽ có thể tự tạo nên Podcast của riêng mình qua những thao tác vô cùng đơn giản, đó là ghi âm trước rồi up file lên trên website, qua vòng kiểm duyệt, Podcast của chính bạn sẽ được đăng lên, góp phần đóng góp thêm trong kho tàng Podcast đồng thời giúp kiếm thêm nguồn thu nhập đó là <strong> Corn Token.</strong> <br> <br>
+                            Sau khi nghe xong Podcast, người dùng sẽ có thể làm những bài <strong>Quiz</strong>, như là một lần củng cố kiến thức của mình, và phần quà sẽ tỉ lệ thuận với mức độ khó tăng dần của Quiz, làm được càng nhiều Quiz, người dùng sẽ có cơ hội được nhận nhiều phần quà hơn. <br> <br>
+                            <strong>Charity</strong> cũng chính là một đặc điểm nổi bật của Website, người dùng sẽ lựa chọn 1 trong những tổ chức từ thiện uy tín trên thế giời như WHO, UNICEF, Red Cross,... 5% phí giao dịch của người dùng sẽ được trích ra để đóng góp vào các quỹ từ thiện của các tổ chức.
+                        </div>
+                        <div class="pop_up_footer">
+                            <a href="/login"> <button class="btn-login">Exit & Login</button> </a>
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
+                    <script src="/js/popup.js"></script>
+                <img src="/assets/character.png" alt="" class="character">
+
+                </div>
+
+                <div class="circle_decoration">
+                    <div class="left_circle"></div>
+                    <div class="right_circle"></div>
+                </div>
+            </div>
+
+            <!-- About Us -->
+            <div class="about_us">
+                <div class="detail_info">
+                    <h1>Our Team</h1>
+                    <div class="big_box">
+                        <div class="member">
+                            <div class="box" style="background-image: url(/assets/member-img/mem3.jpg);">
+                            </div>
+                            <h6 class="name">Đỗ Đức Phú</h6>
+                        </div>
+                        <div class="member">
+                            <div class="box" style="background-image: url(/assets/member-img/mem5.jpg);">
+                            </div>
+                            <h6 class="name">Bùi Quang Tùng</h6>
+                        </div>
+                        <div class="member">
+                            <div class="box" style="background-image: url(/assets/member-img/mem1.jpg);">
+                            </div>
+                            <h6 class="name">Nguyễn Hoàng Hải</h6>
+                        </div>
+                    </div>
+                    <div class="medium_box">
+                        <div class="member">
+                            <div class="box" style="background-image: url(/assets/member-img/mem2.jpg);">
+                            </div>
+                            <h6 class="name">Chu Minh Tuấn</h6>
+                        </div>
+                        <div class="member">
+                            <div class="box" style="background-image: url(/assets/member-img/mem4.jpg);">
+                            </div>
+                            <h6 class="name">Nguyễn Đăng Cường</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of About Us-->
+        </main>
+
+        <!-- Back To Top Button -->
+        <a href="#" class="to_top">
+            <i class="fa fa-chevron-up"></i>
+            <script src="/js/to_top.js"> </script>
+        </a>
+        <!-- End Of "Back To Top Button"-->
+        <%-include('header/footer.ejs')%>
+        <script src="/js/blockchain/plug.js"></script>
+        <!-- Footer -->
+
+    </body>
+</html>

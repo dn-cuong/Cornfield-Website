@@ -1,0 +1,4 @@
+{
+  "ignore": ["public/"],
+  "ext": "js,json,mjs,ts"
+}
